@@ -123,7 +123,7 @@ public class NumbersCatTest {
 
     @Test
     public void donat_1_542_320(){
-        Assertions.assertEquals("Un milió cinc-cents quaranta-dos mil tres  cents vint", NumbersCat.say(1_542_320l));
+        Assertions.assertEquals("Un milió cinc-cents quaranta-dos mil tres-cents vint", NumbersCat.say(1_542_320l));
     }
 
     @Test

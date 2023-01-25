@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Numbers-TDD" target="17" />
+      <module name="Numbers-TDD" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
