@@ -85,4 +85,39 @@ public class NumbersCatTest {
     public void donat_1057_retorna_Mil_cinquanta_set(){
         Assertions.assertEquals("Mil cinquanta-set", NumbersCat.say(1057l));
     }
+
+    @Test
+    public void donat_9999(){
+        Assertions.assertEquals("Nou mil nou-cents noranta-nou", NumbersCat.say(9999l));
+    }
+
+    @Test
+    public void donat_10000(){
+        Assertions.assertEquals("Deu mil", NumbersCat.say(10000l));
+    }
+
+    @Test
+    public void donat_10001(){
+        Assertions.assertEquals("Deu mil un", NumbersCat.say(10001l));
+    }
+
+    @Test
+    public void donat_99999(){
+        Assertions.assertEquals("Noranta-nou mil nou-cents noranta-nou", NumbersCat.say(99999l));
+    }
+
+    @Test
+    public void donat_100000(){
+        Assertions.assertEquals("Cent mil", NumbersCat.say(100000l));
+    }
+
+    @Test
+    public void donat_999999(){
+        Assertions.assertEquals("Nou-cents noranta-nou mil nou-cents noranta-nou", NumbersCat.say(999999l));
+    }
+
+    @Test
+    public void donat_1_000_000(){
+        Assertions.assertEquals("Un milió", NumbersCat.say(1_000_000l));
+    }
 }
