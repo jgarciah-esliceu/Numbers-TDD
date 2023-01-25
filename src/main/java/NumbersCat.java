@@ -96,6 +96,4 @@ public class NumbersCat {
         return nombre;
     }
 
-    String jaja = "si xd";
-
 }
