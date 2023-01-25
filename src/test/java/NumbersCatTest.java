@@ -120,4 +120,19 @@ public class NumbersCatTest {
     public void donat_1_000_000(){
         Assertions.assertEquals("Un milió", NumbersCat.say(1_000_000l));
     }
+
+    @Test
+    public void donat_1_542_320(){
+        Assertions.assertEquals("Un milió cinc-cents quaranta-dos mil tres-cents vint", NumbersCat.say(1_542_320l));
+    }
+
+    @Test
+    public void donat_999_999_999(){
+        Assertions.assertEquals("Nou-cents noranta-nou milions nou-cents noranta-nou mil nou-cents noranta-nou", NumbersCat.say(999_999_999l));
+    }
+
+    @Test
+    public void donat_999_999_999_999(){
+        Assertions.assertEquals("Nou-cents noranta-nou mil nou-cents noranta-nou milions nou-cents noranta-nou mil nou-cents noranta-nou", NumbersCat.say(999_999_999_999l));
+    }
 }
