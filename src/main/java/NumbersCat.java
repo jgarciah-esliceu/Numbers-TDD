@@ -69,24 +69,15 @@ public class NumbersCat {
             String nombre = calculaNombre(n, divisor, xifra, xifres);
             return nombre;
         }
-        if (n > 999 && n < 1_000_000) {
+        if (n > 999) {
             divisor = 1000;
             xifra = "Mil";
             xifres = " mil";
             String nombre = calculaNombre(n, divisor, xifra, xifres);
             return nombre;
         }
-        if (n > 999999) {
-            divisor = 1_000_000;
-            xifra = "Un milió";
-            xifres = " milions";
-            String nombre = calculaNombre(n, divisor, xifra, xifres);
-            return nombre;
-        }
         return null;
     }
-
-
 
     private static String calculaNombre(long n, int divisor, String xifra, String xifres) {
         String nombre = "";
