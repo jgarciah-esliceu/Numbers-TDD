@@ -24,10 +24,16 @@ public class NumbersCat {
             if (unitat == 0) {
                 return  DECENES[desena - 1];
             }
-
+            if (n < 30) return String.format("%s-i-%s", DECENES[desena-1], UNITATS[unitat].toLowerCase());
+            return String.format("%s-%s", DECENES[desena-1], UNITATS[unitat].toLowerCase());
         }
 
-
+        if (n < 1000){
+            return calculaNombre(n, 100, "Cent", "-cents");
+        }
+        if (n < 1000000){
+            return calculaNombre(n, 1000, "Mil", " mil");
+        }
 
         return null;
     }
