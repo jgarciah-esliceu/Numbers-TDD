@@ -10,38 +10,27 @@ public class NumbersCat {
             return "Menys " + say(-n).toLowerCase();
         }
 
-        int unitat = 0;
-        int decena = 0;
-        int divisor = 0;
-        String xifra = "";
-        String xifres = "";
+        if (n < 10) {
+            return UNITATS[(int) n];
+        }
 
-        if (n > 20 && n < 100) {
-            unitat = (int) n % 10;
-            decena = 10 * ((int) n / 10);
-            if (n < 30) {
-                return say(decena) + "-i-" + say(unitat).toLowerCase();
+        if (n < 20 && n != 10) {
+            return MENORSQUEVINT[(int) n - 11];
+        }
+
+        if (n < 100) {
+    º       int unitat = (int) n % 10;
+            int desena = (int) n / 10;
+            if (unitat == 0) {
+                return  DECENES[desena - 1];
             }
-            return say(decena) + "-" + say(unitat).toLowerCase();
+
         }
 
-        if (n >= 100 && n < 1000) {
-            divisor = 100;
-            xifra = "Cent";
-            xifres = "-cents";
-            String nombre = calculaNombre(n, divisor, xifra, xifres);
-            return nombre;
-        }
-        if (n >= 1000 && n < 1000000) {
-            divisor = 1000;
-            xifra = "Mil";
-            xifres = " mil";
-            String nombre = calculaNombre(n, divisor, xifra, xifres);
-            return nombre;
-        }
+
+
         return null;
     }
-
 
 
     private static String calculaNombre(long n, int divisor, String xifra, String xifres) {

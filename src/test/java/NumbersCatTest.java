@@ -12,7 +12,7 @@ public class NumbersCatTest {
         4.3 10 - 19
      */
 
-    @Test
+    @org.junit.Test
     public void donat_0_retorna_Zero() {
         Assertions.assertEquals("Zero", NumbersCat.say(0l));
     }
