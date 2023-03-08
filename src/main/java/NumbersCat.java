@@ -19,7 +19,7 @@ public class NumbersCat {
         }
 
         if (n < 100) {
-    º       int unitat = (int) n % 10;
+            int unitat = (int) n % 10;
             int desena = (int) n / 10;
             if (unitat == 0) {
                 return  DECENES[desena - 1];
@@ -39,21 +39,22 @@ public class NumbersCat {
     }
 
 
-    private static String calculaNombre(long n, int divisor, String xifra, String xifres) {
-        String nombre = "";
-        int centena = (int) (n / divisor);
+    private static String calculaNombre(long n, int divisor, String singular, String plural) {
+        int quocient = (int) (n / divisor);
         int resto = (int) (n % divisor);
         String espai = " ";
 
-        if (centena == 1) {
-            nombre = xifra;
+        String resultat;
+        if (quocient == 1) {
+            resultat = singular;
         } else {
-            nombre = say(centena) + xifres;
+            resultat = say(quocient) + plural;
         }
-        if (resto != 0) {
-            nombre += espai + say(resto).toLowerCase();
+
+        if (resto == 0) {
+            return resultat;
         }
-        return nombre;
+        return String.format("%s%s%s", resultat, espai, say(resto).toLowerCase());
     }
 
 }

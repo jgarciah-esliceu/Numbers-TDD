@@ -63,6 +63,11 @@ public class NumbersCatTest {
     }
 
     @Test
+    public void donat_15_retorna_Quinze() {
+        Assertions.assertEquals("Quinze", NumbersCat.say(15l));
+    }
+
+    @Test
     public void donat_21_retorna_Vint_i_un() {
         Assertions.assertEquals("Vint-i-un", NumbersCat.say(21l));
     }
