@@ -1,50 +1,13 @@
 public class NumbersCat {
+    private static final String[] UNITATS = {"Zero", "Un", "Dos", "Tres", "Quatre", "Cinc", "Sis", "Set", "Vuit", "Nou"};
+    private static final String[] DECENES = {"Deu", "Vint", "Trenta", "Quaranta", "Cinquanta", "Seixanta", "Setanta", "Vuitanta", "Noranta"};
+    private static final String[] MENORSQUEVINT = {"Onze", "Dotze", "Tretze", "Catorze", "Quinze", "Setze", "Disset", "Divuit", "Dinou"};
+
+
     public static String say(long n) {
+
         if (n < 0) {
             return "Menys " + say(-n).toLowerCase();
-        }
-        switch ((int) n) {
-            case 0:
-                return "Zero";
-            case 1:
-                return "Un";
-            case 2:
-                return "Dos";
-            case 3:
-                return "Tres";
-            case 4:
-                return "Quatre";
-            case 5:
-                return "Cinc";
-            case 6:
-                return "Sis";
-            case 7:
-                return "Set";
-            case 8:
-                return "Vuit";
-            case 9:
-                return "Nou";
-        }
-
-        switch ((int) n) {
-            case 10:
-                return "Deu";
-            case 20:
-                return "Vint";
-            case 30:
-                return "Trenta";
-            case 40:
-                return "Quaranta";
-            case 50:
-                return "Cinquanta";
-            case 60:
-                return "Seixanta";
-            case 70:
-                return "Setanta";
-            case 80:
-                return "Vuitanta";
-            case 90:
-                return "Noranta";
         }
 
         int unitat = 0;
